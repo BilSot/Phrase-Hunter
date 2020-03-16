@@ -8,9 +8,11 @@
   --color-lose: #D94545;
   --color-start: #5b85b7;
   --color-neutral: #445069;
+  --color-disabled: #37474f54;
   --color-neutral-light: #D2D2D2;
   --color-keys: #37474F;
   --color-keys-light: #E5E5E5;
+  --color-key-disabled: #e5e5e54d;
   --font-size-large: 60px;
   --font-size-medium: 20px;
   --transition: all .2s ease-in-out;
@@ -60,9 +62,14 @@ button {
   cursor: pointer;
 }
 
+/*button:disabled{*/
+/*  color: var(--color-disabled);*/
+/*  background-color: var(--color-key-disabled);*/
+/*}*/
+
 #btn__reset {
-	width: 200px;
-	margin: 0 auto;
+  width: 200px;
+  margin: 0 auto;
 }
 
 .main-container {
@@ -163,7 +170,7 @@ button {
 /* Overlay */
 
 #overlay {
-  display: none;//flex;
+  display: flex;
   flex-direction: column;
   position: fixed;
   color: #FFFFFF;
@@ -201,4 +208,18 @@ button {
 
 .lose a {
   color: var(--color-lose);
+}
+
+.live-heart-icon{
+  position: absolute;
+  left: 0;
+  display: none;
+}
+
+.lost-heart-icon{
+  display: none;
+}
+
+.tries{
+  position: relative;
 }
